@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'assets/css/carousel.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+    </form>
+
+
+{% endblock %}
+{% block own_js %}
+    <script src="{% static 'assets/js/carousel.js' %}"></script>
+{% endblock %}

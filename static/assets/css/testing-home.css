@@ -1,0 +1,53 @@
+
+
+#grow > div {
+    background: url("../img/foreground.png"), #3467cf;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+#books {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#divider-container{
+    flex-grow:1;
+}
+
+#divider > .cls-2{
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #books {
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #books {
+        overflow: hidden !important;
+        width: 150%;
+    }
+
+}
+
+
+.shadow-yellow {
+    box-shadow: 0 .5rem 1rem rgba(255, 212, 8, .15);
+}
+
+#yellow-bubble {
+    aspect-ratio: 1;
+    min-width: 50%;
+    min-height: 50%;
+    /*background-color: #ffca08;*/
+    background-color: #3467cf;
+    bottom: 10%;
+    right: 10%;
+    border-radius: 50%;
+}

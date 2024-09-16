@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mb-md-0 mb-2">
+                <h1>Choose some <span class="text-primary">books</span> you liked reading</h1>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <p class="text-body-secondary">You can use the search bar to find books by typing in any part of the
+                    title or the author's name. Whether you enter a full title, just a part of it, or the author's name,
+                    the search will show you the latest editions of the relevant books.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center my-3">
+            <div class="d-flex flex-row flex-wrap col-sm-12 col-md-10 col-lg-6 p-3 ">
+                <div class="input-group input-group-lg shadow">
+                    <span class="fa fa-search ps-1 position-absolute d-block text-center"
+                          style="z-index:100;width: 2.375rem;height: 2.375rem;line-height: 3rem;"></span>
+                    <input type="text" class="form-control rounded-top-4 rounded-bottom-0 ps-5"
+                           placeholder="Book name or author" id="autoComplete">
+                    <button class="btn border-2 btn-outline-primary rounded-start-0 rounded-top-4 custom-search-button d-flex align-items-center align-content-center"
+                            id="next-btn" type="button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-start mt-5">
+            <div class="d-flex flex-row flex-wrap col-sm-12 col-md-10 col-lg-6 p-3"
+                 id="selectedBooks">
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary m-0" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary m-0" data-bs-dismiss="modal" id="delete-btn">Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+    </form>
+
+
+{% endblock %}
+
+
+{% block own_js %}
+
+    <script src="{% static 'assets/js/autocomplete.js' %}"></script>
+    <script>
+        input = document.querySelector('#autoComplete')
+        const ac = new Autocomplete(input, {
+            data: [{label: 'No results found', value: 'null'}],
+            maximumItems: 5,
+
+        });
+
+        document.querySelector("#next-btn").addEventListener('click', (e) => {
+            pref = JSON.parse(localStorage.getItem('pref'));
+            pref.books = ac.getSelectedBooks();
+            localStorage.setItem('pref', JSON.stringify(pref));
+            console.log(pref);
+            window.location.replace('/show-recommendations');
+        })
+
+
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,298 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+{% endblock %}
+
+{% block HOME_ONLY %}
+    <div id="grow">
+{% endblock %}
+{% block content %}
+
+    <section>
+        <section class="container">
+            <div class=" row align-content-center align-items-center justify-content-center pt-3 pb-4">
+                <div class="col-md-10 col-12 d-flex align-content-center align-items-center justify-content-center"><h1
+                        class="pt-5 display-1 text-white text-center fw-semibold">Your Next Favorite Book
+                    is Just a Click Away.</h1></div>
+            </div>
+
+            <div class="row align-content-center align-items-center justify-content-center pe-2">
+                <div class="col-md-6 col-12 d-flex align-content-center align-items-center justify-content-center"><p
+                        class="text-center text-white"> Tell us your favorite genres and books,
+                    and let Librio introduce you to the stories you'll love next—start discovering now!</p></div>
+            </div>
+            <div class="row align-content-center align-items-center justify-content-center">
+                <div class="col-12 text-center">
+                    <button type="button" class="btn text-primary fw-semibold bg-white btn-lg shadow-yellow">
+                        <a class="text-decoration-none" href="{% url 'Choose Genre' %}">Find Your Match</a>
+                    </button>
+                </div>
+
+            </div>
+
+
+        </section>
+    </section>
+
+
+
+    </div>
+
+    <div id="divider">
+        <img src="{% static 'assets/img/books-hero.webp' %}" alt="books-hero" id="books">
+    </div>
+    
+
+    <section class="container">
+        <div class="row align-content-center align-items-center justify-content-center my-5" id="about-us">
+            <div class="col-12 col-md-12 text-center">
+                <h1 class="display-3 pb-md-3 fw-bold">Discover the Story Behind <span class="text-primary">Librio</span>
+                </h1>
+                <p class="text-body-secondary">At Librio, we’re dedicated to helping you find your next great read. We
+                    tailor recommendations based on your favorite genres and past reads, offering personalized book
+                    suggestions that match your tastes. Whether you’re craving a thrilling mystery, a heartwarming
+                    romance, or an enlightening non-fiction, Librio is here to guide your reading journey. Welcome to a
+                    place where every reader finds their next favorite book.</p>
+            </div>
+        </div>
+        <div class="row rounded-5 shadow-lg p-4 my-4" id="how-it-works">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center p-2 p-md-5">
+                <h1 class="display-3 pb-md-3 text-start fw-bold">How It Works:</h1>
+
+                <p class="text-body-secondary">Getting personalized book recommendations with Librio is simple
+                    and quick. In just a few clicks, you’ll discover your next favorite read! Just follow these
+                    three easy steps:
+                <div class="py-3"><h2 class="lh-1">Choose Your <span class="text-primary">Favorite Genres</span>:
+                </h2>
+                    Start by selecting the genres you love.
+                </div>
+                <div class="py-3"><h2 class="lh-1">Pick <span class="text-primary">Books</span> You’ve <span
+                        class="text-primary">Read</span>:</h2> Tell us a few titles you’ve enjoyed.
+                </div>
+                <div class="py-3"><h2 class="lh-1">Get Your <span class="text-primary">Results</span>:</h2> Librio
+                    will
+                    instantly suggest new books tailored
+                    to your tastes.
+                </div>
+                </p>
+                <div class=" pt-3">
+
+                    <button type="button" class="btn px-5 btn-primary btn-lg fw-semibold shadow">
+
+                        <a class="text-decoration-none text-white" href="{% url 'Choose Genre' %}">Start Now</a>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="col-12 col-md-6 text-white position-relative">
+                <div class="position-absolute" id="yellow-bubble"></div>
+                <img class="img-fluid p-5 position-relative" src="{% static 'assets/img/kniga.png' %}">
+            </div>
+        </div>
+        <div class="row my-5" id="reviews">
+            <div class="col-md-7">
+                <h1 class="display-4 fw-semibold py-3">What Readers Are Saying About <span
+                        class="text-primary">Librio</span></h1>
+                <p class="pb-4">Discover how Librio has transformed the reading experiences of our users, helping them
+                    find their
+                    next favorite book effortlessly.</p>
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <div class="testimonial-content rounded-4 shadow">
+                            <div class="testimonial-icon rounded-end-3">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor
+                                sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
+                            </p>
+                        </div>
+                        <h3 class="title">williamson</h3>
+                        <span class="post">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content rounded-4 shadow">
+                            <div class="testimonial-icon rounded-end-3">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor
+                                sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
+                            </p>
+                        </div>
+                        <h3 class="title">Kristina</h3>
+                        <span class="post">
+                             <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </span>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content rounded-4 shadow">
+                            <div class="testimonial-icon rounded-end-3">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor
+                                sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
+                            </p>
+                        </div>
+                        <h3 class="title">williamson</h3>
+                        <span class="post">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content rounded-4 shadow">
+                            <div class="testimonial-icon rounded-end-3">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor
+                                sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
+                            </p>
+                        </div>
+                        <h3 class="title">Marija</h3>
+                        <span class="post">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content rounded-4 shadow">
+                            <div class="testimonial-icon rounded-end-3">
+                                <i class="fa fa-quote-left text-white"></i>
+                            </div>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor
+                                sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
+                            </p>
+                        </div>
+                        <h3 class="title">Filip</h3>
+                        <span class="post">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5  d-flex align-items-center align-content-center justify-content-center">
+                <img class="img-fluid d-none d-md-block" src="{% static 'assets/img/reviews-2.png' %}">
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="bg-primary">
+        <section class="container mt-5 py-4">
+            <div class="row justify-content-between" id="newsletter">
+                <div class="col-md-4 col-12"><h5 class="fw-light text-white">SUBSCRIBE NOW</h5>
+                    <h2 class="text-white">Stay Updated on Book Deals with Librio</h2>
+
+                </div>
+                <div class="col-md-6 col-12 d-flex flex-column justify-content-center  align-items-end py-4 py-md-0">
+                    <div class="input-group  input-group-lg ">
+                        <input type="text" class="shadow p-3 form-control rounded-pill"
+                               placeholder="Enter email address." id="autoComplete">
+                        <button class="btn btn-primary border-2 fw-medium text-white rounded-pill custom-search-button d-flex align-items-center align-content-center "
+                                id="next-btn" type="button">Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="container">
+        <div class="row pt-4">
+            <div class="col-md-3 col-lg-6 order-md-last d-flex justify-content-center flex-column align-items-center align-items-md-end my-3">
+                <img height="100px" src="{% static 'assets/img/logo.webp' %}">
+                <p class="text-md-end text-center">Your personal guide to discovering books you'll love. Explore genres,
+                    uncover hidden gems, and dive
+                    into curated reads based on your unique taste.</p>
+            </div>
+            <div class="col-md-9 col-lg-6 d-flex justify-content-center flex-column my-3 my-md-0">
+                <h2 class="text-md-start text-center">Information</h2>
+                <div class="row">
+                    <div class="col-md-4 col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="#about-us"
+                                   class="py-1 fs-5 d-block text-decoration-none text-md-start text-center"><i
+                                    class="fa-solid fa-link text-secondary"></i>&nbsp; About Us</a></li>
+                            <li><a href="#how-it-works"
+                                   class="py-1 fs-5 d-block text-decoration-none text-md-start text-center"><i
+                                    class="fa-solid fa-link text-secondary"></i>&nbsp; How it Works</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="#reviews"
+                                   class="py-1 fs-5 d-block text-decoration-none text-md-start text-center"><i
+                                    class="fa-solid fa-link text-secondary"></i>&nbsp; Reviews</a></li>
+                            <li><a href="#newsletter"
+                                   class="py-1 fs-5 d-block text-decoration-none text-md-start text-center"><i
+                                    class="fa-solid fa-link text-secondary"></i>&nbsp; Newsletter</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Librio, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-secondary" href="#">
+                    <i class="fa-brands fa-instagram fa-2xl social-media"></i>
+                </a></li>
+                <li class="ms-3"><a class="text-secondary" href="#">
+                    <i class="fa-brands fa-x-twitter fa-2xl social-media"></i>
+
+                </a></li>
+                <li class="ms-3"><a class="text-secondary" href="#">
+                    <i class="fa-brands fa-facebook fa-2xl social-media"></i>
+                </a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+{% endblock %}
+
+
+{% block own_js %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{% static 'assets/js/home.js' %}"></script>
+
+{% endblock %}

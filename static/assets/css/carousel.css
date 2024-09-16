@@ -1,0 +1,47 @@
+@media screen and (min-width: 992px) {
+    .carousel-control-next {
+        padding-left: 7.5em !important;
+    }
+
+    .carousel-control-prev {
+        padding-right: 7.5em !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-device-width: 992px) and (orientation: portrait) {
+    .carousel-control-next {
+        padding-left: 4.5em !important;
+    }
+
+    .carousel-control-prev {
+        padding-right: 4.5em !important;
+    }
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3467cf;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Center the spinner */
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+

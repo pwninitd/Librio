@@ -1,0 +1,39 @@
+* {
+    font-family: 'Lufga', sans-serif;
+    color: #001c46;
+}
+
+.f-w-800 {
+    font-weight: 800;
+}
+
+.custom-search-button {
+    position: absolute !important;
+    right: 5px !important;
+    top: 5px !important;
+    bottom: 5px !important;
+    z-index: 100 !important;
+}
+
+.btn:hover {
+    transition: 100ms;
+    transform: scale(1.1) !important;
+}
+.btn i{
+    color:#3467cf;
+}
+
+.btn:hover i {
+    color: white;
+}
+
+.btn-square {
+    width: 150px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 150px !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 12px;
+}
+

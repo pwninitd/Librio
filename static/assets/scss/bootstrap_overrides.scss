@@ -1,0 +1,44 @@
+@import "./bootstrap/functions";
+$primary: #3467cf;
+$secondary: #001c46;
+$carousel-indicator-width: 7px;
+$carousel-indicator-height: 7px;
+.carousel-indicators {
+  .active{
+    width:30px;
+  }
+}
+
+
+@import "./bootstrap/variables";
+@import "./bootstrap/variables-dark";
+@import "./bootstrap/maps";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+
+
+$box-shadow:                  0 .5rem 1rem rgba($primary, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba($primary, .075);
+$box-shadow-lg:               0 1rem 3rem rgba($primary, .3);
+$box-shadow-inset:            inset 0 1px 2px rgba($primary, .075);
+
+
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": map-merge(
+      map-get($utilities, "height"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "height"), "values"),
+          (15: 15%, 35:35%, 70:70%, 85:85%),
+        ),
+      ),
+    ),
+  )
+);
+
+
+@import "./bootstrap/utilities/api";
+@import "./bootstrap/bootstrap";
