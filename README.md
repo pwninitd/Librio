@@ -40,8 +40,8 @@ discover their next great read.
 
 # Installation and Setup
 
-[!IMPORTANT]
-Make sure you have docker and git installed on your machine before proceeding.
+> [!IMPORTANT]
+> Make sure you have docker and git installed on your machine before proceeding.
 
 ## 1. Clone the repository and navigate to the project directory
 
@@ -49,7 +49,7 @@ Open Command Prompt or PowerShell on Windows, or Terminal on macOS or Linux, and
 want to save the project. Then, clone the repository and navigate into the project folder.
 
 ```sh
-git clone https://github.com/yourusername/Librio.git && cd Librio
+git clone https://github.com/pwninitd/Librio.git && cd Librio
 ```
 
 ## 2. Create an API Key
@@ -71,8 +71,8 @@ docker compose build && docker compose up
 sudo docker compose build && sudo docker compose up
 ```
 
-[!NOTE]
-After following these steps, the app should be running and accessible at http://0.0.0.0:8000
+> [!NOTE]
+> After following these steps, the app should be running and accessible at http://0.0.0.0:8000
 
 # Documentation
 
