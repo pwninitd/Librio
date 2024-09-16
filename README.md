@@ -4,18 +4,19 @@ Your personal guide to discovering books you'll love. Explore genres, uncover hi
 based on your unique taste.
 
 # Table of Contents
+
 1. [Overview](#overview)
 2. [Technologies Used](#technologies-used)
 3. [APIs Used](#apis-used)
 4. [Installation and Setup](#installation-and-setup)
-   1. [Clone The Repo](#1-clone-the-repository-and-navigate-to-the-project-directory)
-   2. [Create API Key](#2-create-an-api-key)
-   3. [Building and Running the Application](#3-building-and-running-the-application)
-      1. [Windows](#--windows)
-      2. [MacOS and Linux](#--macos-and-linux)
+    1. [Clone The Repo](#1-clone-the-repository-and-navigate-to-the-project-directory)
+    2. [Create API Key](#2-create-an-api-key)
+    3. [Building and Running the Application](#3-building-and-running-the-application)
+        1. [Windows](#--windows)
+        2. [MacOS and Linux](#--macos-and-linux)
 5. [Documentation](#documentation)
-   1. [user_setup app](#user_setup)
-   2. [api app](#api)
+    1. [user_setup app](#user_setup)
+    2. [api app](#api)
 6. [Challenges Encountered](#challenges-encountered)
 7. [Future Improvements](#future-improvements)
 8. [Contributing](#contributing)
@@ -55,7 +56,8 @@ git clone https://github.com/pwninitd/Librio.git && cd Librio
 ## 2. Create an API Key
 
 Before building and running the application (since it uses the Groq API),
-visit [this link]('https://console.groq.com/keys') to create an api key.
+visit [this link]('https://console.groq.com/keys') to create an api key. Once obtained, add the key to the `GROQ_API_KEY`
+variable in the `docker-compose.yaml` file located in the root directory.
 
 ## 3. Building and running the application
 
